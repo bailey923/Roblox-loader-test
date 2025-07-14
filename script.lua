@@ -6,3 +6,4 @@ if part then
 else
     warn("Part not found in model!")
 end
+print("The part has been destroy!")
