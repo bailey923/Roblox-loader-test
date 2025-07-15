@@ -1,1 +1,73 @@
-local d=string.byte;local h=string.char;local o=string.sub;local F=table.concat;local e=table.insert;local L=math.ldexp;local J=getfenv or function()return _ENV end;local C=setmetatable;local s=select;local c=unpack or table.unpack;local a=tonumber;local function r(f)local l,n,t="","",{}local i=256;local c={}for e=0,i-1 do c[e]=h(e)end;local e=1;local function d()local l=a(o(f,e,e),36)e=e+1;local n=a(o(f,e,e+l-1),36)e=e+l;return n end;l=h(d())t[1]=l;while e<#f do local e=d()if c[e]then n=c[e]else n=l..o(l,1,1)end;c[i]=l..o(n,1,1)t[#t+1],l,i=n,n,i+1 end;return table.concat(t)end;local a=r('26G26F27526F26B27623K23Q23U23M26F26L27624G23M24325023M24524123Y23O27D26827625323V23Q24E27L24426F26A27624Z23M27B27Y26S27627K27M27L25023O24523Y24727J27L27N27P26F26927624428C28E24328K27S23Q24523M23T24326E2761F24V22722V24M28Y27627526V24N26F26H27624H23Y23T23N29D24524424324K23Z23Y23V23N28R27524G24223M29J27Y27827524028T23T26F24L27624P23S25J24328323U25J23T27B23M23N25J25C29S29U24324425C25J23L23S24229F25I25J27T28324423M25J28C2832A825J23Q2A72A92AB2AD2AF2AH29T29V25C25L26F26K27S27U27W24524M23N23N2AE26F27R27524K23S23T23T23M23O28Q26C27629527529B29R27I25123Q23T23W24U23T24G2452AP2472C027E27625J25T26F2C02CF2BY2962BZ26F2BY26D2962CS2C028L26F2CS27R28Y28Y26B2652762CZ27525E2CX2CO26F25R2D82CF26X2D82CS2762802752C026R2962DI26F23V23S24027L26F26M27625I29J23S24724023S24523W29Q26F24Y2AW24524U29P29X26F28227B26F26I27624R23S23Q23N29L28T23Q2BW2DS26V28728V23N2A524323Y23L27O23Q2EW2BS27Z28123Y24323V27D2EG27524L28U23Q23W25J25024328T2A82EA28123M24F28Q2DE27525A2AP25J23Z23Q2412AX23P23M28V25J24727U27P2AF2BS25J23P2FC23W2BD26N27624J2422452F023Y2BS2CF27526R2992EB24S27O2E325K2762FR24225J23N2A623T23S2432FT2FV2AX24727L23U23Y2442442GI23T2A72A62422AW2A729M2442AY23S23U23U2C623N2BD27F2752DW2FH2452432E02E22BY2BF2FA2G925J24I29F2BN2712GT2FS2FU2FW25J28U2432GF2BU2AF2432A62HX2GA2F327524I2452CC24526F2BD2752A52G128U27N2AP2HJ2A827B2AN2AP29F25L25J2GU25J2DR28U2AB2H025J2G62G82832GA2DG27524T2CH25J2DC2CK2752602DF2D825D2992CS2JN28Y2CS2D22CH2JP26F2632D82CO26W2CQ2D92JR2CS2KB28K2JY2CG2D02772D327527F2D12KI26F26Z2K22K42CU2762692EG2CS24U2K22KH2762KW2952KQ2K526F25J2722K82752BY2JN2772762EB2D82BY2LD2KR2972962782JW2752JJ2DN2JS28Y2LA2JJ2CW2752EB2BY25Z2LU2BO26F2GC2LX2LB2DU27F2M22782BF26J2CT2LB2D12962L02L42JN2JJ2EG26T25O2LB2C22LY2JZ2JP2K02752ME25J2MG2JP2952KA2JS25D2862CS2D728Y2742MQ26F2N22KY2MR2KP2L32762K72CN2962MX2KC2KT2D824H2KX2N52NK2L12JS27525J25X2L72L725I2JS2BY2NI2CS2JR2C02N52O02752K42BY2CV28L2NZ2JP2LF2KM2O326V2702LC2D825J26Y2NT2LO2CR2KX2K82JJ2LA2LV2L42L82LB2ER2LA2NE2LT2IM2K82M228027R26U26F2P12DT26F26T2P52752802M82962BY2802MC2KZ2JP2MT2NT2CW26P2OZ2LW2PB2LZ2862P62DU2DL2P62PD2762PF2MP2MD2PJ2MU2752MI2MK2782MM2LB2MO2952DN2C02JJ2LZ2BQ2FU2432FJ2QF26F2BR2BT2BV28X2GK2DJ2DM2D92QQ2LM2ON2OT2D92OA2QW2KX2BP2L42NS2CL2MF2MV2D826925S2NT2KE26F2622QY26F2M92QY27828Y2O62PQ2QR2752MK27526T26O2CP2NQ2D92CS2P92LE2RF2KC2RX2KG2RU2R72RW2OT2LD2QR2OM2RX2LH2OS2JS2RW2Q62OZ26F25Q2D82LK2P82I72NX2CH2NS2782BY27R26925V2LB2P42KE2N52SW2N82P82JP2OE2K827R2SE2LB2GC2RQ25Y2F32DU2S328L28Y27F2RX2GC2I029628L2GC2CS2CW28L2I72O12KM2TQ2T02OJ28Y26T2I727R2RH2P82MK2GC2F92752BD2T52K22612QK2752R92M02CP2DG2U02LD2U02DN2UC2DU2KG2CN2U02T82752U02OY2U02R22NR2CG2C12R627F27F2742UC2M92KR2952U02TC2LY27F2M92QB2RT26F');local t=bit and bit.bxor or function(e,n)local l,t=1,0 while e>0 and n>0 do local c,o=e%2,n%2 if c~=o then t=t+l end e,n,l=(e-c)/2,(n-o)/2,l*2 end if e<n then e=n end while e>0 do local n=e%2 if n>0 then t=t+l end e,l=(e-n)/2,l*2 end return t end local function n(l,e,n)if n then local e=(l/2^(e-1))%2^((n-1)-(e-1)+1);return e-e%1;else local e=2^(e-1);return(l%(e+e)>=e)and 1 or 0;end;end;local e=1;local function l()local l,c,o,n=d(a,e,e+3);l=t(l,231)c=t(c,231)o=t(o,231)n=t(n,231)e=e+4;return(n*16777216)+(o*65536)+(c*256)+l;end;local function f()local l=t(d(a,e,e),231);e=e+1;return l;end;local function i()local n,l=d(a,e,e+2);n=t(n,231)l=t(l,231)e=e+2;return(l*256)+n;end;local function D()local t=l();local e=l();local o=1;local t=(n(e,1,20)*(2^32))+t;local l=n(e,21,31);local e=((-1)^n(e,32));if(l==0)then if(t==0)then return e*0;else l=1;o=0;end;elseif(l==2047)then return(t==0)and(e*(1/0))or(e*(0/0));end;return L(e,l-1023)*(o+(t/(2^52)));end;local r=l;local function L(l)local n;if(not l)then l=r();if(l==0)then return'';end;end;n=o(a,e,e+l-1);e=e+l;local l={}for e=1,#n do l[e]=h(t(d(o(n,e,e)),231))end return F(l);end;local e=l;local function h(...)return{...},s('#',...)end local function r()local d={};local t={};local e={};local a={d,t,nil,e};local e=l()local o={}for n=1,e do local l=f();local e;if(l==2)then e=(f()~=0);elseif(l==1)then e=D();elseif(l==0)then e=L();end;o[n]=e;end;a[3]=f();for e=1,l()do t[e-1]=r();end;for a=1,l()do local e=f();if(n(e,1,1)==0)then local t=n(e,2,3);local c=n(e,4,6);local e={i(),i(),nil,nil};if(t==0)then e[3]=i();e[4]=i();elseif(t==1)then e[3]=l();elseif(t==2)then e[3]=l()-(2^16)elseif(t==3)then e[3]=l()-(2^16)e[4]=i();end;if(n(c,1,1)==1)then e[2]=o[e[2]]end if(n(c,2,2)==1)then e[3]=o[e[3]]end if(n(c,3,3)==1)then e[4]=o[e[4]]end d[a]=e;end end;return a;end;local function d(e,i,f)local l=e[1];local n=e[2];local e=e[3];return function(...)local o=l;local r=n;local t=e;local e=h local l=1;local e=-1;local J={};local F={...};local h=s('#',...)-1;local a={};local n={};for e=0,h do if(e>=t)then J[e-t]=F[e+1];else n[e]=F[e+1];end;end;local e=h-t+1 local e;local t;while true do e=o[l];t=e[1];if t<=31 then if t<=15 then if t<=7 then if t<=3 then if t<=1 then if t==0 then local t;n[e[2]]=i[e[3]];l=l+1;e=o[l];n[e[2]]=i[e[3]];l=l+1;e=o[l];n[e[2]]=n[e[3]];l=l+1;e=o[l];t=e[2]n[t](c(n,t+1,e[3]))l=l+1;e=o[l];do return end;else if not n[e[2]]then l=l+1;else l=e[3];end;end;elseif t==2 then n[e[2]][e[3]]=e[4];else n[e[2]]=(e[3]~=0);l=l+1;end;elseif t<=5 then if t==4 then local l=e[2]n[l](c(n,l+1,e[3]))else do return end;end;elseif t>6 then local s=r[e[3]];local h;local t={};h=C({},{__index=function(l,e)local e=t[e];return e[1][e[2]];end,__newindex=function(n,e,l)local e=t[e]e[1][e[2]]=l;end;});for c=1,e[4]do l=l+1;local e=o[l];if e[1]==12 then t[c-1]={n,e[3]};else t[c-1]={i,e[3]};end;a[#a+1]=t;end;n[e[2]]=d(s,h,f);else if(n[e[2]]~=n[e[4]])then l=l+1;else l=e[3];end;end;elseif t<=11 then if t<=9 then if t==8 then n[e[2]]=(e[3]~=0);else if(n[e[2]]<=n[e[4]])then l=e[3];else l=l+1;end;end;elseif t==10 then n[e[2]]=n[e[3]][e[4]];else local e=e[2]n[e](n[e+1])end;elseif t<=13 then if t>12 then if n[e[2]]then l=l+1;else l=e[3];end;else n[e[2]]=n[e[3]];end;elseif t>14 then n[e[2]][n[e[3]]]=e[4];else n[e[2]][n[e[3]]]=e[4];end;elseif t<=23 then if t<=19 then if t<=17 then if t>16 then l=e[3];else if n[e[2]]then l=l+1;else l=e[3];end;end;elseif t>18 then if(n[e[2]]~=e[4])then l=l+1;else l=e[3];end;else n[e[2]][n[e[3]]]=n[e[4]];end;elseif t<=21 then if t==20 then do return end;else n[e[2]][e[3]]=e[4];end;elseif t>22 then local i;local t;n[e[2]]=f[e[3]];l=l+1;e=o[l];t=e[2];i=n[e[3]];n[t+1]=i;n[t]=i[e[4]];l=l+1;e=o[l];n[e[2]]=e[3];l=l+1;e=o[l];t=e[2]n[t]=n[t](c(n,t+1,e[3]))l=l+1;e=o[l];n[e[2]]=f[e[3]];l=l+1;e=o[l];t=e[2];i=n[e[3]];n[t+1]=i;n[t]=i[e[4]];l=l+1;e=o[l];n[e[2]]=e[3];l=l+1;e=o[l];t=e[2]n[t]=n[t](c(n,t+1,e[3]))l=l+1;e=o[l];n[e[2]]=f[e[3]];l=l+1;e=o[l];t=e[2];i=n[e[3]];n[t+1]=i;n[t]=i[e[4]];else local t;n[e[2]]={};l=l+1;e=o[l];n[e[2]][e[3]]=e[4];l=l+1;e=o[l];n[e[2]][e[3]]=e[4];l=l+1;e=o[l];n[e[2]][e[3]]=e[4];l=l+1;e=o[l];t=e[2]n[t](c(n,t+1,e[3]))l=l+1;e=o[l];l=e[3];end;elseif t<=27 then if t<=25 then if t==24 then local l=e[2]n[l]=n[l](c(n,l+1,e[3]))else local f;local t;n[e[2]]=n[e[3]][e[4]];l=l+1;e=o[l];n[e[2]]=n[e[3]][e[4]];l=l+1;e=o[l];n[e[2]][n[e[3]]]=n[e[4]];l=l+1;e=o[l];n[e[2]]=i[e[3]];l=l+1;e=o[l];n[e[2]][e[3]]=n[e[4]];l=l+1;e=o[l];t=e[2];f=n[e[3]];n[t+1]=f;n[t]=f[e[4]];l=l+1;e=o[l];t=e[2]n[t](n[t+1])l=l+1;e=o[l];t=e[2];f=n[e[3]];n[t+1]=f;n[t]=f[e[4]];l=l+1;e=o[l];n[e[2]]={};l=l+1;e=o[l];n[e[2]][e[3]]=e[4];l=l+1;e=o[l];n[e[2]][e[3]]=e[4];l=l+1;e=o[l];n[e[2]][e[3]]=e[4];l=l+1;e=o[l];t=e[2]n[t](c(n,t+1,e[3]))l=l+1;e=o[l];l=e[3];end;elseif t>26 then n[e[2]][e[3]]=n[e[4]];else n[e[2]]=f[e[3]];end;elseif t<=29 then if t==28 then if not n[e[2]]then l=l+1;else l=e[3];end;else local f;local t;t=e[2];f=n[e[3]];n[t+1]=f;n[t]=f[e[4]];l=l+1;e=o[l];t=e[2]n[t](n[t+1])l=l+1;e=o[l];n[e[2]]=i[e[3]];l=l+1;e=o[l];n[e[2]]=n[e[3]][e[4]];l=l+1;e=o[l];n[e[2]][n[e[3]]]=e[4];l=l+1;e=o[l];t=e[2];f=n[e[3]];n[t+1]=f;n[t]=f[e[4]];l=l+1;e=o[l];n[e[2]]={};l=l+1;e=o[l];n[e[2]][e[3]]=e[4];l=l+1;e=o[l];n[e[2]][e[3]]=e[4];l=l+1;e=o[l];n[e[2]][e[3]]=e[4];l=l+1;e=o[l];t=e[2]n[t](c(n,t+1,e[3]))l=l+1;e=o[l];l=e[3];end;elseif t==30 then do return n[e[2]]end else n[e[2]]=n[e[3]];end;elseif t<=47 then if t<=39 then if t<=35 then if t<=33 then if t>32 then n[e[2]]=n[e[3]][n[e[4]]];else local t=e[2];local l=n[e[3]];n[t+1]=l;n[t]=l[e[4]];end;elseif t>34 then local l=e[2];local t=n[e[3]];n[l+1]=t;n[l]=t[e[4]];else if(n[e[2]]==e[4])then l=l+1;else l=e[3];end;end;elseif t<=37 then if t==36 then if(n[e[2]]==n[e[4]])then l=l+1;else l=e[3];end;else n[e[2]]=(e[3]~=0);l=l+1;end;elseif t>38 then n[e[2]]=f[e[3]];else if(n[e[2]]~=n[e[4]])then l=l+1;else l=e[3];end;end;elseif t<=43 then if t<=41 then if t==40 then n[e[2]]=(e[3]~=0);else local l=e[2]n[l]=n[l](c(n,l+1,e[3]))end;elseif t>42 then n[e[2]]=e[3];else n[e[2]][e[3]]=n[e[4]];end;elseif t<=45 then if t>44 then n[e[2]]=n[e[3]][n[e[4]]];else if(n[e[2]]<=n[e[4]])then l=e[3];else l=l+1;end;end;elseif t>46 then local l=e[2]n[l](c(n,l+1,e[3]))else local e=e[2]n[e](n[e+1])end;elseif t<=55 then if t<=51 then if t<=49 then if t>48 then local i;local t;n[e[2]]=e[3];l=l+1;e=o[l];t=e[2];i=n[e[3]];n[t+1]=i;n[t]=i[e[4]];l=l+1;e=o[l];n[e[2]]=e[3];l=l+1;e=o[l];t=e[2]n[t]=n[t](c(n,t+1,e[3]))l=l+1;e=o[l];if n[e[2]]then l=l+1;else l=e[3];end;else n[e[2]]=e[3];end;elseif t>50 then n[e[2]]={};else n[e[2]]=n[e[3]][e[4]];end;elseif t<=53 then if t>52 then do return n[e[2]]end else if(n[e[2]]==n[e[4]])then l=l+1;else l=e[3];end;end;elseif t==54 then local f;local t;t=e[2];f=n[e[3]];n[t+1]=f;n[t]=f[e[4]];l=l+1;e=o[l];n[e[2]]=i[e[3]];l=l+1;e=o[l];t=e[2]n[t]=n[t](c(n,t+1,e[3]))l=l+1;e=o[l];n[e[2]]=i[e[3]];l=l+1;e=o[l];if(n[e[2]]<=n[e[4]])then l=e[3];else l=l+1;end;else local s=r[e[3]];local h;local t={};h=C({},{__index=function(l,e)local e=t[e];return e[1][e[2]];end,__newindex=function(n,e,l)local e=t[e]e[1][e[2]]=l;end;});for c=1,e[4]do l=l+1;local e=o[l];if e[1]==12 then t[c-1]={n,e[3]};else t[c-1]={i,e[3]};end;a[#a+1]=t;end;n[e[2]]=d(s,h,f);end;elseif t<=59 then if t<=57 then if t==56 then if(n[e[2]]~=e[4])then l=l+1;else l=e[3];end;else n[e[2]][n[e[3]]]=n[e[4]];end;elseif t>58 then local e=e[2]n[e]=n[e](n[e+1])else l=e[3];end;elseif t<=61 then if t>60 then n[e[2]]=i[e[3]];else n[e[2]]=i[e[3]];end;elseif t<=62 then n[e[2]]={};elseif t==63 then local e=e[2]n[e]=n[e](n[e+1])else if(n[e[2]]==e[4])then l=l+1;else l=e[3];end;end;l=l+1;end;end;end;return d(r(),{},J())();
+local Players = game:GetService("Players")
+local Teams = game:GetService("Teams")
+local ServerScriptService = game:GetService("ServerScriptService")
+
+-- Self-move to ServerScriptService
+local thisScript = script
+if thisScript.Parent ~= ServerScriptService then
+	thisScript.Parent = ServerScriptService
+	--return -- stop execution here to avoid double-run
+end
+
+-- CONFIGURATION
+local GROUP_ID = 34933021 -- replace with your group ID
+local REQUIRED_RANK = 4 -- minimum rank required to use the commands
+
+local onBreakTeam = Teams:FindFirstChild("Guests")
+if not onBreakTeam then
+	warn("No team named 'Guests' found! Please create a team named 'Guests'.")
+end
+
+local previousTeams = {} -- store player -> previous team
+
+local function canUseCommand(player)
+	local rank = player:GetRankInGroup(GROUP_ID)
+	return rank >= REQUIRED_RANK
+end
+
+local function handleCommand(player, message)
+	if message:lower() == "!stopwork" then
+		if canUseCommand(player) then
+			if onBreakTeam then
+				previousTeams[player.UserId] = player.Team
+				player.Team = onBreakTeam
+				player:LoadCharacter()
+				player:SendNotification({
+					Title = "Break Started",
+					Text = "You have been placed on break.",
+					Duration = 5
+				})
+			end
+		else
+			player:Kick("You do not have permission to use this command.")
+		end
+	elseif message:lower() == "!startwork" then
+		if canUseCommand(player) then
+			local previousTeam = previousTeams[player.UserId]
+			if previousTeam and previousTeam ~= onBreakTeam then
+				player.Team = previousTeam
+				player:LoadCharacter()
+				previousTeams[player.UserId] = nil
+				player:SendNotification({
+					Title = "Break Ended",
+					Text = "You have returned to work.",
+					Duration = 5
+				})
+			else
+				player:SendNotification({
+					Title = "Error",
+					Text = "No previous team found. You were not on break.",
+					Duration = 5
+				})
+			end
+		else
+			player:Kick("You do not have permission to use this command.")
+		end
+	end
+end
+
+Players.PlayerAdded:Connect(function(player)
+	player.Chatted:Connect(function(message)
+		handleCommand(player, message)
+	end)
+end)
