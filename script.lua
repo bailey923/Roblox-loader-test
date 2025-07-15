@@ -3,11 +3,12 @@ local Teams = game:GetService("Teams")
 local ServerScriptService = game:GetService("ServerScriptService")
 
 -- Self-move to ServerScriptService
-local thisScript = script
+--[[local thisScript = script
 if thisScript.Parent ~= ServerScriptService then
 	thisScript.Parent = ServerScriptService
 	--return -- stop execution here to avoid double-run
-end
+end--]]
+
 
 -- CONFIGURATION
 local GROUP_ID = 34933021 -- replace with your group ID
